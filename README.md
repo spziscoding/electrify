@@ -1,0 +1,2 @@
+# Electrify
+Shopify Theme
