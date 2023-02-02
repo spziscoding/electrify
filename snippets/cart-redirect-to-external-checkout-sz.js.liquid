@@ -3,7 +3,7 @@
   @param checkout_url (string, mandatory) the checkout url
   @param checkout_button_selector (string) the query selector for the checkout button
 {% endcomment -%}
-  
+
 {% unless checkout_url %}
   {% assign checkout_url = settings.external_checkout_link %}
 {% endunless %}
@@ -13,7 +13,7 @@
 {% endunless %}
 
 <script>
-        
+
   document.addEventListener("DOMContentLoaded", function () {
 
     var debug = true ? console.log.bind(console, '[DEBUG][RedirectCart]') : function () {};
@@ -53,7 +53,7 @@
         self.$checkoutButton = $(self.options.checkoutButtonSelector);
 
         debug('Initialized with options', self.options);
-        
+
         inject();
       }
 
@@ -70,10 +70,10 @@
         event.preventDefault();
         window.location.href = checkoutUrl;
       }
-      
+
       function getCartCookie(name) {
        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-        if (match){ 
+        if (match){
           return match[2];
           }
  	  }
@@ -86,7 +86,7 @@
         }, []).join(';');
 
     	var urlParametersCurrency = new URLSearchParams(window.location.search);
-    	checkout_currency = urlParametersCurrency.get('currency');
+    	checkout_currency = urlParametersCurrency.get('currency_code');
 
         if(checkout_currency == null) {
           checkout_currency = "USD";
