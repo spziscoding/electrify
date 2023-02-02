@@ -1,0 +1,41 @@
+<script>
+  
+        /* BEST Currency Converter Cart Update & Follow Currency Code in Cart Parameter */
+        /* Redirect Ajax cart to cart page with currency code parameter [spZ] */  
+        function goToCart() {
+          var selectcurrencyCode = document.querySelector('select[name="doubly-currencies"]');
+          var currencyCode = selectcurrencyCode.value; 
+          window.location.href = "/cart?currency=" + currencyCode;
+        }
+
+        /* Simulate select change option [spZ] */
+        function fireEvent(currencyCode){
+          var selectcurrency = document.querySelector('select[name="doubly-currencies"]');
+          selectcurrency.value = currencyCode;
+          selectcurrency.dispatchEvent(new Event('change'));
+          if ("createEvent" in document) {
+            var evt = document.createEvent("HTMLEvents");
+            evt.initEvent("change", false, true);
+            selectcurrency.dispatchEvent(evt);
+          }
+        }
+
+        /* Update cart currency [spZ] */
+        function changeCartCurrency() {
+          var selectcurrencyCode = document.querySelector('select[name="doubly-currencies"]');
+          var currencyCode = selectcurrencyCode.value; 
+          fireEvent(currencyCode);
+        };
+
+        /* Trigger a fake cart open with direct button link [spZ] */
+        function manualOpenCart() {
+          document.getElementById('open-cart-drawer').click();
+        };
+
+        /* Update cart currency on cart open [spZ] */
+        const jsopendrawer = document.querySelectorAll('.js-drawer-open-cart');
+          jsopendrawer.forEach(el => el.addEventListener('click', event => {
+          changeCartCurrency();
+        }));
+        
+</script>
