@@ -88,6 +88,10 @@
     	var urlParametersCurrency = new URLSearchParams(window.location.search);
     	checkout_currency = urlParametersCurrency.get('currency');
 
+        if(checkout_currency == null) {
+          checkout_currency = "USD";
+        }
+
         return self.options.checkoutUrl + '?products=' + urlLineItems + '&cartId=' + cookie + '&currency=' + checkout_currency;
       }
 
