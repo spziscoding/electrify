@@ -1,18 +1,21 @@
 <script>
-
+  
         /* BEST Currency Converter Cart Update & Follow Currency Code in Cart Parameter */
-        /* Redirect Ajax cart to cart page with currency code parameter [spZ] */
+        /* Redirect Ajax cart to cart page with currency code parameter [spZ] */  
         function goToCart() {
 
-          /* Old System [spZ] */
-          /*var selectcurrencyCode = document.querySelector('select[name="doubly-currencies"]');
-          var currencyCode = selectcurrencyCode.value;*/
-
-          /* Now Uses Span Class Content innerHTML [spZ] */
           var getCurrencyFromClass = document.getElementsByClassName("notranslate");
           var currencyCode = getCurrencyFromClass[0].innerHTML;
           var currencyCode = currencyCode.substr(currencyCode.length - 3);
 
+          if(currencyCode.length < 1) {
+              var selectcurrencyCode = document.querySelector('select[name="doubly-currencies"]');
+              var currencyCode = selectcurrencyCode.value;
+              if(currencyCode.length < 1) {
+                currencyCode = "USD";
+              }
+          }
+          
           window.location.href = "/cart?currency=" + currencyCode;
         }
 
@@ -31,15 +34,18 @@
         /* Update cart currency [spZ] */
         function changeCartCurrency() {
 
-          /* Old System [spZ] */
-          /*var selectcurrencyCode = document.querySelector('select[name="doubly-currencies"]');
-          var currencyCode = selectcurrencyCode.value;*/
-
-          /* Now Uses Span Class Content innerHTML [spZ] */
           var getCurrencyFromClass = document.getElementsByClassName("notranslate");
           var currencyCode = getCurrencyFromClass[0].innerHTML;
           var currencyCode = currencyCode.substr(currencyCode.length - 3);
 
+          if(currencyCode.length < 1) {
+              var selectcurrencyCode = document.querySelector('select[name="doubly-currencies"]');
+              var currencyCode = selectcurrencyCode.value;
+              if(currencyCode.length < 1) {
+                currencyCode = "USD";
+              }
+          }
+          
           fireEvent(currencyCode);
         };
 
@@ -53,5 +59,5 @@
           jsopendrawer.forEach(el => el.addEventListener('click', event => {
           changeCartCurrency();
         }));
-
+        
 </script>
