@@ -4,7 +4,7 @@
   {%- endif -%}
 
     <span class="announcement__text{% unless sections.settings.announcement_closable %} announcement__text--open{% endunless %}" data-text="{{ section.settings.announcement_text | strip_html | handle }}">
-      {{ section.settings.announcement_text | strip_html }}
+      {{ section.settings.announcement_text | strip_html }} <img id="countryflagannouncementtwo" src="https://www.infosniper.net/ip2countryflag.php" width="24" style="position:relative; left: 2px; top: 3px; display:inline-block!important;"></span>
     </span>
 
   {%- if section.settings.announcement_link != blank -%}

@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Manage Subscription",
+        "text": "<p>Please send us a message to cancel or modify your VIP Membership. Please cancel your Membership at least 2 days before the debit date, otherwise your order will be processed and shipped.<br\/><br\/>Please understand that no refunds will be possible after the refund date. Thank you.<\/p>",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich-text",
+    "form"
+  ]
+}

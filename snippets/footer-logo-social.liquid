@@ -1,17 +1,10 @@
-<div class="footer__logo-social">
-  {%- if block.settings.logo -%}
-    {%- style -%}
-      .footer__logo a {
-        height: {{ block.settings.desktop_logo_height }}px;
-      }
-    {%- endstyle -%}
-    {%- assign footer_logo_size = block.settings.desktop_logo_height | prepend: 'x' -%}
-    <div class="footer__logo">
-      <a href="{{ routes.root_url }}">
-        <img src="{{ block.settings.logo | img_url: footer_logo_size, scale: 2 }}" alt="{{ block.settings.logo.alt | default: shop.name }}">
+<div class="footer__logo-social"><style data-shopify="">.footer__logo a {
+        height: 100px;
+      }</style><div class="footer__logo">
+      <a href="/">
+        <img src="//cdn.shopify.com/s/files/1/0715/4381/6482/files/logo-black_d4bcea6e-2690-4081-a038-25f7ff8aa0c8_x50@2x.png?v=1675263062" id="footer-logo" alt="{{ shop.name }}">
       </a>
     </div>
-  {%- endif -%}
 
   <ul class="no-bullets footer__social">
     {%- if settings.social_facebook_link != blank -%}
@@ -97,3 +90,11 @@
   </ul>
 
 </div>
+
+<script>
+  var getLogoHtml = document.getElementsByClassName("medium-up--hide");
+  var logoHtml = getLogoHtml[0].src;
+  if(logoHtml.length > 0) {
+    document.getElementById("footer-logo").src = logoHtml;
+  }
+</script>
