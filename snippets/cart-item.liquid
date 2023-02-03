@@ -18,12 +18,12 @@
 
   <div class="cart__item--details">
     <div class="cart__item--name">
-      <a href="{{ product.url }}" class="cart__product-name">
+      <a href="{{ product.url }}" class="cart__product-name" style="font-family: var(--typeHeaderPrimary)!important; text-transform:uppercase!important;">
         {{ product.product.title }}
       </a>
 
       {%- unless product.product.has_only_default_variant -%}
-        <div class="cart__variant-meta">
+        <div class="cart__variant-meta" style="font-family: var(--typeHeaderPrimary)!important; letter-spacing: 1px!important; opacity: .25!important;">
           {{ product.variant.title }}
         </div>
       {%- endunless -%}

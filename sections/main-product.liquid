@@ -192,67 +192,74 @@
       },
       {
         "type": "inventory_status",
-        "name": "Inventory status",
+        "name": "Free Shipping",
         "limit": 1,
-        "settings": [
-          {
-            "type": "range",
-            "id": "inventory_threshold",
-            "label": "Low inventory threshold",
-            "default": 10,
-            "min": 0,
-            "max": 20,
-            "step": 2
-          },
-          {
-            "type": "checkbox",
-            "id": "inventory_transfers_enable",
-            "label": "Show inventory transfer notice",
-            "info": "Learn how to create inventory transfers [here](https://help.shopify.com/en/manual/products/inventory/transfers/create-transfer)",
-            "default": true
-          }
-        ]
+        "settings": []
       },
       {
         "type": "sales_point",
-        "name": "Sales point",
+        "name": "Text Line With Icon",
         "settings": [
           {
             "type": "select",
             "id": "icon",
-            "label": "Icon",
+            "label": "t:product_block.sales_point.settings.icon.label",
             "default": "globe",
             "options": [
               {
                 "value": "checkmark",
-                "label": "Checkmark"
+                "label": "t:product_block.sales_point.settings.icon.options.checkmark.label"
+              },
+              {
+                "value": "gift",
+                "label": "t:product_block.sales_point.settings.icon.options.gift.label"
               },
               {
                 "value": "globe",
-                "label": "Globe"
+                "label": "t:product_block.sales_point.settings.icon.options.globe.label"
+              },
+              {
+                "value": "heart",
+                "label": "t:product_block.sales_point.settings.icon.options.heart.label"
               },
               {
                 "value": "leaf",
-                "label": "Leaf"
-              },
-              {
-                "value": "package",
-                "label": "Package"
+                "label": "t:product_block.sales_point.settings.icon.options.leaf.label"
               },
               {
                 "value": "lock",
-                "label": "Lock"
+                "label": "t:product_block.sales_point.settings.icon.options.lock.label"
+              },
+              {
+                "value": "package",
+                "label": "t:product_block.sales_point.settings.icon.options.package.label"
+              },
+              {
+                "value": "phone",
+                "label": "t:product_block.sales_point.settings.icon.options.phone.label"
+              },
+              {
+                "value": "ribbon",
+                "label": "t:product_block.sales_point.settings.icon.options.ribbon.label"
+              },
+              {
+                "value": "shield",
+                "label": "t:product_block.sales_point.settings.icon.options.shield.label"
+              },
+              {
+                "value": "tag",
+                "label": "t:product_block.sales_point.settings.icon.options.tag.label"
               },
               {
                 "value": "truck",
-                "label": "Truck"
+                "label": "t:product_block.sales_point.settings.icon.options.truck.label"
               }
             ]
           },
           {
             "type": "text",
             "id": "text",
-            "label": "Text",
+            "label": "t:product_block.sales_point.settings.text.label",
             "default": "Free worldwide shipping"
           }
         ]
