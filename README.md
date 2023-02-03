@@ -4,6 +4,7 @@
 
 ## Features
   * Fully customizable design to match your brand aesthetic
+  * Free, easy, ready to use and open-source
   * Mobile-friendly and responsive design for optimal viewing on all devices
   * Advanced product filtering for easy search and navigation
   * Multi-language support for international reach
