@@ -1,6 +1,6 @@
 # Electrify
 
-> The premium Shopify theme designed for both small and large businesses.
+> The premium Shopify theme designed for both small and large businesses. Written in html, javascript and liquid.
 
 ## Features
   * Fully customizable design to match your brand aesthetic
