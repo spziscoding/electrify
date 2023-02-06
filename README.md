@@ -24,6 +24,16 @@ Electrify is the perfect choice for those looking to launch a professional and u
   1. [Download Electrify v1.0.1](https://codeload.github.com/spziscoding/electrify/zip/main)
   2. Upload theme file to your Shopify Store
 
+## Pages
+
+In order to create pages corresponding to the links of the about menu, you can use the templates already included in the theme. Just create an empty page and fill in like below : * title | template name.
+
+### Corresponding pages to about menu
+  * Manage Subscription | manage-subscription
+  * Legal Notice | legals
+  * Shipping | shipping
+  * Terms & Conditions | terms
+
 ## Troubleshooting
 
 Our dedicated support team is available 24/7 to assist with any questions or issues. Plus, we continually update the theme to ensure compatibility with the latest Shopify features and performance enhancements.
