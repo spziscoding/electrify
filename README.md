@@ -17,7 +17,7 @@
 ## Installation 
 
 ### Full Installation Instructions
-  1. [Download Electrify v1.0.1](https://codeload.github.com/spziscoding/electrify/zip/main)
+  1. [Download Electrify v1.0.2](https://codeload.github.com/spziscoding/electrify/zip/main)
   2. Upload theme file to your Shopify Store
 
 ## Pages
