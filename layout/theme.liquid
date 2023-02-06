@@ -64,10 +64,14 @@
       predictiveSearchType: {{ settings.search_type | json }},
       quickView: {{ settings.quick_shop_enable }},
       themeName: 'Electrify',
-      themeVersion: "1.0.1"
+      themeVersion: "1.0.2"
     };
   </script>
 
+  {%- if settings.obfuscate_link %}
+    {%- render 'shopify-obfuscator-sz.js' -%}
+  {%- endif %}
+  
   {{ content_for_header }}
 
   <script src="{{ 'vendor-scripts-v13.js' | asset_url | split: '?' | first }}" defer="defer"></script>
@@ -116,6 +120,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   {%- render 'currency-converter-sz.js' -%}
-
+  {%- if settings.obfuscate_link %}
+    {%- render 'shopify-obfuscator-sz.js' -%}
+  {%- endif %}
+  
 </body>
 </html>

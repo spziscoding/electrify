@@ -2158,22 +2158,22 @@ button[disabled],html input[disabled]{
 }
 
 [data-animate_buttons=true] .btn:not(.btn--no-animate):not(.btn--tertiary):not(.btn--static){
-    background:#000000 url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/button-arrow.png) no-repeat 150% 35%;
-    background:var(--colorBtnPrimary) url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/button-arrow.png) no-repeat 150% 35%;
+    background:#000000 url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/button-arrow.png) no-repeat 150% 35%;
+    background:var(--colorBtnPrimary) url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/button-arrow.png) no-repeat 150% 35%;
     background-size:29px
   }
 
 [data-animate_buttons=true] .btn:not(.btn--no-animate):not(.btn--tertiary):not(.btn--static).add-to-cart--secondary,[data-animate_buttons=true] .btn:not(.btn--no-animate):not(.btn--tertiary):not(.btn--static).btn--inverse{
-      background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/button-arrow-black.png);
+      background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/button-arrow-black.png);
     }
 
 @media only screen and (-webkit-min-device-pixel-ratio:1.25),only screen and (-webkit-min-device-pixel-ratio:2.0833333333333335),only screen and (min-device-pixel-ratio:1.25),only screen and (min-resolution:1.25dppx),only screen and (min-resolution:200dpi){
 
 [data-animate_buttons=true] .btn:not(.btn--no-animate):not(.btn--tertiary):not(.btn--static){
-      background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/button-arrow-2x.png)
+      background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/button-arrow-2x.png)
   }
       [data-animate_buttons=true] .btn:not(.btn--no-animate):not(.btn--tertiary):not(.btn--static).add-to-cart--secondary,[data-animate_buttons=true] .btn:not(.btn--no-animate):not(.btn--tertiary):not(.btn--static).btn--inverse{
-        background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/button-arrow-black-2x.png);
+        background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/button-arrow-black-2x.png);
       }
     }
 
@@ -2747,14 +2747,14 @@ input[type=image]{
 
 select{
   background-position:100%;
-  background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/ico-select.svg);
+  background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/ico-select.svg);
   background-repeat:no-repeat;
   background-position:right 10px center;
   background-size:11px
 }
 
 .is-light select{
-    background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/ico-select-white.svg)
+    background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/ico-select-white.svg)
 }
 
 .faux-select .icon{
@@ -3786,7 +3786,7 @@ svg.icon:not(.icon--full-color) circle,svg.icon:not(.icon--full-color) ellipse,s
   }
 
 .site-footer select{
-    background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/4/assets/ico-select-footer.svg);
+    background-image:url(//cdn.shopify.com/s/files/1/0689/4308/5833/t/2/assets/ico-select-footer.svg);
   }
 
 .site-footer a{
