@@ -24,7 +24,7 @@
 
 In order to create pages corresponding to the links of the about menu, you can use the templates already included in the theme. Just create an empty page and fill in like below : * title | template name.
 
-### Corresponding pages to about menu
+### About menu corresponding pages [title | template]
   * Manage Subscription | manage-subscription
   * Legal Notice | legals
   * Shipping | shipping
