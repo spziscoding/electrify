@@ -14,10 +14,6 @@
   * User Experience
   * With Electrify, you'll provide your customers with a seamless browsing and shopping experience. Its intuitive navigation and fast page load speeds will keep your  
 
-## Conclusion
-
-Electrify is the perfect choice for those looking to launch a professional and user-friendly online store. Its advanced features and top-notch support make it the go-to theme for businesses of all sizes. Try Electrify today and take your online store to the next level.
-
 ## Installation 
 
 ### Full Installation Instructions
