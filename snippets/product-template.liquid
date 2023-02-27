@@ -246,7 +246,7 @@
                       {%- unless product.empty? -%}
                         <div class="product-block">
                           {%- assign show_dynamic_payment_buttons = block.settings.show_dynamic_checkout -%}
-                          {%- if settings.use_external_checkout -%}
+                          {%- if settings.enable_external_checkout -%}
                             {%- assign show_dynamic_payment_buttons = false -%}
                           {%- endif -%}
                             {%- render 'product-form',

@@ -1,4 +1,4 @@
-{% if settings.cart_type == 'drawer' or settings.use_external_checkout %}
+{% if settings.cart_type == 'drawer' or settings.enable_external_checkout %}
   <div id="CartDrawer" class="drawer drawer--right">
     <form id="CartDrawerForm" action="{{ routes.cart_url }}" method="post" novalidate class="drawer__contents">
       <div class="drawer__fixed-header">
@@ -62,14 +62,14 @@
             </div>
           {% endif %}
 
-          {% if settings.use_external_checkout %}
+          {% if settings.enable_external_checkout %}
 
             <div onclick="goToCart()" class="btn cart__checkout">
               {{ 'cart.general.checkout' | t }}
             </div>
 
           {% else %}
-            
+
           <div class="cart__checkout-wrapper">
             <button type="submit" name="checkout" data-terms-required="{{ settings.cart_terms_conditions_enable }}" class="btn cart__checkout">
               {{ 'cart.general.checkout' | t }}
@@ -79,7 +79,7 @@
               <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
             {% endif %}
           </div>
-          
+
           {% endif %}
         </div>
       </div>

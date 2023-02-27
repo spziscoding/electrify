@@ -82,8 +82,8 @@
             {%- endif -%}
 
             <div class="cart__checkout-wrapper">
-              
-              {%- if settings.use_external_checkout -%}
+
+              {%- if settings.enable_external_checkout -%}
                 <button type="submit" name="externalcheckout" id="submitcheckout" {% if settings.cart_terms_conditions_enable %} data-terms="CartPageAgree"{% endif %} class="btn btn--no-animate cart__checkout">
                   {{ 'cart.general.checkout' | t }}
                 </button>
@@ -91,7 +91,7 @@
                 <button id="type="submit" name="checkout" {% if settings.cart_terms_conditions_enable %} data-terms="CartPageAgree"{% endif %} class="btn btn--no-animate cart__checkout">
                   {{ 'cart.general.checkout' | t }}
                 </button>
-  
+
                 {%- if additional_checkout_buttons and settings.cart_additional_buttons -%}
                   <div class="additional-checkout-buttons additional-checkout-buttons--vertical">{{ content_for_additional_checkout_buttons }}</div>
                 {%- endif -%}
@@ -107,7 +107,7 @@
   {%- endif -%}
 </div>
 
-{% if settings.use_external_checkout %}
+{% if settings.enable_external_checkout %}
   <div style="width:100vw; height:100vh; background:#ffffff; z-index:9999; position:fixed; top:0; left:0;"></div>
   {% include 'cart-redirect-to-external-checkout-sz.js' with cart: cart %}
   <script>
