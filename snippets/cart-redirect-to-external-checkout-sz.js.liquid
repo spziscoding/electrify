@@ -199,11 +199,7 @@
           {%- for item in cart.items -%}
             {%- if item.variant.metafields.productId.productId -%}
           {%- if added_first %},{% endif -%}
-           {%- if item.selling_plan_allocation -%}
-          "{{ item.variant.metafields.productId.productId}}{{"|"}}{{item.selling_plan_allocation.selling_plan.name}}": {{ item.quantity | json }}
-          {%- else -%}
            "{{ item.variant.metafields.productId.productId }}": {{ item.quantity | json }}
-          {% endif -%}
               {%- assign added_first = true -%}
           {%- endif -%}
           {%- endfor -%}
