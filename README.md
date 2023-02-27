@@ -17,14 +17,14 @@
 ## Installation 
 
 ### Full Installation Instructions
-  1. [Download Electrify v1.0.1](https://codeload.github.com/spziscoding/electrify/zip/main)
+  1. [Download Electrify v1.0.2](https://codeload.github.com/spziscoding/electrify/zip/main)
   2. Upload theme file to your Shopify Store
 
 ## Pages
 
 In order to create pages corresponding to the links of the about menu, you can use the templates already included in the theme. Just create an empty page and fill in like below : * title | template name.
 
-### Corresponding pages to about menu
+### About menu corresponding pages [title | template]
   * Manage Subscription | manage-subscription
   * Legal Notice | legals
   * Shipping | shipping
