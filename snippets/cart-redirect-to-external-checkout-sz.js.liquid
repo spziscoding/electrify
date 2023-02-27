@@ -1,18 +1,185 @@
 {%- comment %}
   @param cart (cart, mandatory)
-  @param checkout_url (string, mandatory) the checkout url
   @param checkout_button_selector (string) the query selector for the checkout button
 {% endcomment -%}
-
-{% unless checkout_url %}
-  {% assign checkout_url = settings.external_checkout_link %}
-{% endunless %}
 
 {% unless checkout_button_selector %}
   {% assign checkout_button_selector = '[name="externalcheckout"]' %}
 {% endunless %}
 
 <script>
+
+  var total_split_percentage = 0;
+
+  var use_checkout_1 = JSON.parse('{{ settings.use_external_checkout_1 }}');
+  var checkout_1_link = '{{ settings.external_checkout_link_1 }}';
+  var checkout_1_percentage = Number('{{ settings.external_checkout_1_percentage }}');
+  if(use_checkout_1) { total_split_percentage += checkout_1_percentage }
+
+  var use_checkout_2 = JSON.parse('{{ settings.use_external_checkout_2 }}');
+  var checkout_2_link = '{{ settings.external_checkout_link_2 }}';
+  var checkout_2_percentage = Number('{{ settings.external_checkout_2_percentage }}');
+  if(use_checkout_2) { total_split_percentage += checkout_2_percentage }
+
+  var use_checkout_3 = JSON.parse('{{ settings.use_external_checkout_3 }}');
+  var checkout_3_link = '{{ settings.external_checkout_link_3 }}';
+  var checkout_3_percentage = Number('{{ settings.external_checkout_3_percentage }}');
+  if(use_checkout_3) { total_split_percentage += checkout_3_percentage }
+
+  var use_checkout_4 = JSON.parse('{{ settings.use_external_checkout_4 }}');
+  var checkout_4_link = '{{ settings.external_checkout_link_4 }}';
+  var checkout_4_percentage = Number('{{ settings.external_checkout_4_percentage }}');
+  if(use_checkout_4) { total_split_percentage += checkout_4_percentage }
+
+  var use_checkout_5 = JSON.parse('{{ settings.use_external_checkout_5 }}');
+  var checkout_5_link = '{{ settings.external_checkout_link_5 }}';
+  var checkout_5_percentage = Number('{{ settings.external_checkout_5_percentage }}');
+  if(use_checkout_5) { total_split_percentage += checkout_5_percentage }
+
+  var use_checkout_6 = JSON.parse('{{ settings.use_external_checkout_6 }}');
+  var checkout_6_link = '{{ settings.external_checkout_link_6 }}';
+  var checkout_6_percentage = Number('{{ settings.external_checkout_6_percentage }}');
+  if(use_checkout_6) { total_split_percentage += checkout_6_percentage }
+
+  var use_checkout_7 = JSON.parse('{{ settings.use_external_checkout_7 }}');
+  var checkout_7_link = '{{ settings.external_checkout_link_7 }}';
+  var checkout_7_percentage = Number('{{ settings.external_checkout_7_percentage }}');
+  if(use_checkout_7) { total_split_percentage += checkout_7_percentage }
+
+  var use_checkout_8 = JSON.parse('{{ settings.use_external_checkout_8 }}');
+  var checkout_8_link = '{{ settings.external_checkout_link_8 }}';
+  var checkout_8_percentage = Number('{{ settings.external_checkout_8_percentage }}');
+  if(use_checkout_8) { total_split_percentage += checkout_8_percentage }
+
+  var use_checkout_9 = JSON.parse('{{ settings.use_external_checkout_9 }}');
+  var checkout_9_link = '{{ settings.external_checkout_link_9 }}';
+  var checkout_9_percentage = Number('{{ settings.external_checkout_9_percentage }}');
+  if(use_checkout_9) { total_split_percentage += checkout_9_percentage }
+
+  var use_checkout_10 = JSON.parse('{{ settings.use_external_checkout_10 }}');
+  var checkout_10_link = '{{ settings.external_checkout_link_10 }}';
+  var checkout_10_percentage = Number('{{ settings.external_checkout_10_percentage }}');
+  if(use_checkout_10) { total_split_percentage += checkout_10_percentage }
+
+  var use_checkout_11 = JSON.parse('{{ settings.use_external_checkout_11 }}');
+  var checkout_11_link = '{{ settings.external_checkout_link_11 }}';
+  var checkout_11_percentage = Number('{{ settings.external_checkout_11_percentage }}');
+  if(use_checkout_11) { total_split_percentage += checkout_11_percentage }
+
+  var use_checkout_12 = JSON.parse('{{ settings.use_external_checkout_12 }}');
+  var checkout_12_link = '{{ settings.external_checkout_link_12 }}';
+  var checkout_12_percentage = Number('{{ settings.external_checkout_12_percentage }}');
+  if(use_checkout_12) { total_split_percentage += checkout_12_percentage }
+
+  var use_checkout_13 = JSON.parse('{{ settings.use_external_checkout_13 }}');
+  var checkout_13_link = '{{ settings.external_checkout_link_13 }}';
+  var checkout_13_percentage = Number('{{ settings.external_checkout_13_percentage }}');
+  if(use_checkout_13) { total_split_percentage += checkout_13_percentage }
+
+  var use_checkout_14 = JSON.parse('{{ settings.use_external_checkout_14 }}');
+  var checkout_14_link = '{{ settings.external_checkout_link_14 }}';
+  var checkout_14_percentage = Number('{{ settings.external_checkout_14_percentage }}');
+  if(use_checkout_14) { total_split_percentage += checkout_14_percentage }
+
+  var use_checkout_15 = JSON.parse('{{ settings.use_external_checkout_15 }}');
+  var checkout_15_link = '{{ settings.external_checkout_link_15 }}';
+  var checkout_15_percentage = Number('{{ settings.external_checkout_15_percentage }}');
+  if(use_checkout_15) { total_split_percentage += checkout_15_percentage }
+
+  var use_checkout_16 = JSON.parse('{{ settings.use_external_checkout_16 }}');
+  var checkout_16_link = '{{ settings.external_checkout_link_16 }}';
+  var checkout_16_percentage = Number('{{ settings.external_checkout_16_percentage }}');
+  if(use_checkout_16) { total_split_percentage += checkout_16_percentage }
+
+  var use_checkout_17 = JSON.parse('{{ settings.use_external_checkout_17 }}');
+  var checkout_17_link = '{{ settings.external_checkout_link_17 }}';
+  var checkout_17_percentage = Number('{{ settings.external_checkout_17_percentage }}');
+  if(use_checkout_17) { total_split_percentage += checkout_17_percentage }
+
+  var use_checkout_18 = JSON.parse('{{ settings.use_external_checkout_18 }}');
+  var checkout_18_link = '{{ settings.external_checkout_link_18 }}';
+  var checkout_18_percentage = Number('{{ settings.external_checkout_18_percentage }}');
+  if(use_checkout_18) { total_split_percentage += checkout_18_percentage }
+
+  var use_checkout_19 = JSON.parse('{{ settings.use_external_checkout_19 }}');
+  var checkout_19_link = '{{ settings.external_checkout_link_19 }}';
+  var checkout_19_percentage = Number('{{ settings.external_checkout_19_percentage }}');
+  if(use_checkout_19) { total_split_percentage += checkout_19_percentage }
+
+  var use_checkout_20 = JSON.parse('{{ settings.use_external_checkout_20 }}');
+  var checkout_20_link = '{{ settings.external_checkout_link_20 }}';
+  var checkout_20_percentage = Number('{{ settings.external_checkout_20_percentage }}');
+  if(use_checkout_20) { total_split_percentage += checkout_20_percentage }
+
+  if(total_split_percentage != 100) {
+
+    old_total_split_percentage = total_split_percentage;
+    total_split_percentage = 100;
+
+    if(use_checkout_1) { checkout_1_percentage = (checkout_1_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_2) { checkout_2_percentage = (checkout_2_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_3) { checkout_3_percentage = (checkout_3_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_4) { checkout_4_percentage = (checkout_4_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_5) { checkout_5_percentage = (checkout_5_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_6) { checkout_6_percentage = (checkout_6_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_7) { checkout_7_percentage = (checkout_7_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_8) { checkout_8_percentage = (checkout_8_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_9) { checkout_9_percentage = (checkout_9_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_10) { checkout_10_percentage = (checkout_10_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_11) { checkout_11_percentage = (checkout_11_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_12) { checkout_12_percentage = (checkout_12_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_13) { checkout_13_percentage = (checkout_13_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_14) { checkout_14_percentage = (checkout_14_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_15) { checkout_15_percentage = (checkout_15_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_16) { checkout_16_percentage = (checkout_16_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_17) { checkout_17_percentage = (checkout_17_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_18) { checkout_18_percentage = (checkout_18_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_19) { checkout_19_percentage = (checkout_19_percentage * total_split_percentage) / old_total_split_percentage }
+    if(use_checkout_20) { checkout_20_percentage = (checkout_20_percentage * total_split_percentage) / old_total_split_percentage }
+
+  }
+
+  let checkouts = [];
+
+  if(use_checkout_1) { checkouts.push({ url: checkout_1_link, chance: checkout_1_percentage }) }
+  if(use_checkout_2) { checkouts.push({ url: checkout_2_link, chance: checkout_2_percentage }) }
+  if(use_checkout_3) { checkouts.push({ url: checkout_3_link, chance: checkout_3_percentage }) }
+  if(use_checkout_4) { checkouts.push({ url: checkout_4_link, chance: checkout_4_percentage }) }
+  if(use_checkout_5) { checkouts.push({ url: checkout_5_link, chance: checkout_5_percentage }) }
+  if(use_checkout_6) { checkouts.push({ url: checkout_6_link, chance: checkout_6_percentage }) }
+  if(use_checkout_7) { checkouts.push({ url: checkout_7_link, chance: checkout_7_percentage }) }
+  if(use_checkout_8) { checkouts.push({ url: checkout_8_link, chance: checkout_8_percentage }) }
+  if(use_checkout_9) { checkouts.push({ url: checkout_9_link, chance: checkout_9_percentage }) }
+  if(use_checkout_10) { checkouts.push({ url: checkout_10_link, chance: checkout_10_percentage }) }
+  if(use_checkout_11) { checkouts.push({ url: checkout_11_link, chance: checkout_11_percentage }) }
+  if(use_checkout_12) { checkouts.push({ url: checkout_12_link, chance: checkout_12_percentage }) }
+  if(use_checkout_13) { checkouts.push({ url: checkout_13_link, chance: checkout_13_percentage }) }
+  if(use_checkout_14) { checkouts.push({ url: checkout_14_link, chance: checkout_14_percentage }) }
+  if(use_checkout_15) { checkouts.push({ url: checkout_15_link, chance: checkout_15_percentage }) }
+  if(use_checkout_16) { checkouts.push({ url: checkout_16_link, chance: checkout_16_percentage }) }
+  if(use_checkout_17) { checkouts.push({ url: checkout_17_link, chance: checkout_17_percentage }) }
+  if(use_checkout_18) { checkouts.push({ url: checkout_18_link, chance: checkout_18_percentage }) }
+  if(use_checkout_19) { checkouts.push({ url: checkout_19_link, chance: checkout_19_percentage }) }
+  if(use_checkout_20) { checkouts.push({ url: checkout_20_link, chance: checkout_20_percentage }) }
+
+  let sort_checkouts = checkouts.sort((a, b) => a.chance - b.chance);
+  var random_checkout = Math.floor(Math.random() * (total_split_percentage + 1));
+  var checkout_redirect_url;
+
+  var checkouts_length = sort_checkouts.length;
+  for(var i = 0; i < checkouts_length; i++) {
+      var chance = Math.trunc(sort_checkouts[i].chance);
+      var url = sort_checkouts[i].url;
+      if(i+1 == checkouts_length) {
+        checkout_redirect_url = url;
+      }
+      else {
+        if(random_checkout < chance) {
+          checkout_redirect_url = url;
+          break;
+        }
+      }
+  }
 
   document.addEventListener("DOMContentLoaded", function () {
 
@@ -47,7 +214,7 @@
         self.options = Object.assign({
           products: productIdsWithQuantities(),
           checkoutButtonSelector: '{{ checkout_button_selector }}',
-          checkoutUrl: '{{ checkout_url }}',
+          checkoutUrl: checkout_redirect_url,
         }, options);
 
         self.$checkoutButton = $(self.options.checkoutButtonSelector);
