@@ -165,12 +165,26 @@
   let sort_checkouts = checkouts.sort((a, b) => a.chance - b.chance);
   var random_checkout = Math.floor(Math.random() * (total_split_percentage + 1));
   var checkout_redirect_url;
+  let checkouts_list = [];
 
   var checkouts_length = sort_checkouts.length;
   for(var i = 0; i < checkouts_length; i++) {
-      var chance = Math.trunc(sort_checkouts[i].chance);
-      var url = sort_checkouts[i].url;
-      if(i+1 == checkouts_length) {
+      var i_chance = Math.trunc(sort_checkouts[i].chance);
+      var checkout_i_url = sort_checkouts[i].url;
+      if(i == 0) {
+        checkouts_list.push({ url: checkout_i_url, chance: i_chance })
+      }
+      else {
+        i_chance = i_chance + checkouts_list[i-1].chance;
+        checkouts_list.push({ url: checkout_i_url, chance: i_chance })
+      }
+  }
+
+  var checkouts_list_length = checkouts_list.length;
+  for(var i = 0; i < checkouts_list_length; i++) {
+      var chance = Math.trunc(checkouts_list[i].chance);
+      var url = checkouts_list[i].url;
+      if(i+1 == checkouts_list_length) {
         checkout_redirect_url = url;
       }
       else {
